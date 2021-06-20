@@ -3,18 +3,21 @@
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un array
   // Tu código:
+  return array[0];
 }
 
 
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
+  return array[array.length - 1];
 }
 
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
+  return array.length;
 }
 
 
@@ -23,6 +26,11 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
+  var otroArray = [];
+  for(i = 0; i < array.length; i++) {
+    otroArray[i] = array[i] + 1;
+  }
+  return otroArray;
 }
 
 
@@ -30,6 +38,8 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
+  array.push(elemento);
+  return array;
 }
 
 
@@ -38,6 +48,8 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
+  array.unshift(elemento);
+  return array;
 }
 
 
@@ -47,6 +59,7 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
+  return palabras.join(" ");
 }
 
 
@@ -54,6 +67,7 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
+  return array.includes(elemento);
 }
 
 
@@ -61,6 +75,10 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+  var numero  = 0;
+  for(i = 0; i < numeros.length; i++) {
+    numero = numero + numeros[i];  
+  }return numero;
 }
 
 
@@ -68,6 +86,10 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+  var numero = 0;
+  for(i = 0; i < resultadosTest.length; i++) {
+    numero = numero + resultadosTest[i];
+  }return numero / resultadosTest.length;
 }
 
 
@@ -75,6 +97,13 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  var max = 0;
+  for(i = 0; i < numeros.length; i++) {
+    if(max < numeros[i]) {
+      max = numeros[i];
+    } 
+  }return max; 
+  //Math.max.apply(null, numeros);
 }
 
 
@@ -82,7 +111,11 @@ function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
-  
+  let arraySeis = [];
+  for(i = 0; i <= 60; i++) {
+    arraySeis.push(6 * i);
+  }
+  return arraySeis;
 }
 
 function multiplicarArgumentos() {
